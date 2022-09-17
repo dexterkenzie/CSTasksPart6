@@ -9,30 +9,30 @@ Console.WriteLine("Введите числа через запятую:");
 string numbers = Console.ReadLine();
 
 string[] newNumbers = new string[numbers.Length];
-int k = 0;
+int step = 0;
 for (int i = 0; i < newNumbers.Length; i++)
 {
     if (numbers[i] == ',')
     {
-        k++;
+        step++;
     }
     else
     {
-        newNumbers[k] = newNumbers[k] + $"{numbers[i]}";
+        newNumbers[step] = newNumbers[step] + $"{numbers[i]}";
     }
 }
-k++;
-int[] resultNumbers = new int[k];
+step++;
+int[] resultNumbers = new int[step];
 PrintArray(resultNumbers, newNumbers);
-int sum = 0;
-for (int i = 0; i < k; i++)
+int result = 0;
+for (int i = 0; i < step; i++)
 {
     if (resultNumbers[i] > 0)
     {
-        sum++;
+        result++;
     }
 }
-Console.WriteLine("Количество чисел больше 0: " + sum);
+Console.WriteLine($"Чисел больше 0: {result}");
 
 void PrintArray(int[] array, string[] string1)
 {
