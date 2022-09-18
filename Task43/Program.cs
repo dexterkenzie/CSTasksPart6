@@ -15,8 +15,8 @@ void InputCoefficients()
         Console.WriteLine($"Введите коэффициенты {i + 1}-го уравнения (y = k * x + b):");
         for (int j = 0; j < factor.GetLength(1); j++)
         {
-            if (j == 0) Console.Write($"Введите коэффициент k: ");
-            else Console.Write($"Введите коэффициент b: ");
+            if (j == 0) Console.Write($"Введите k: ");
+            else Console.Write($"Введите b: ");
             factor[i, j] = Convert.ToInt32(Console.ReadLine());
         }
     }
